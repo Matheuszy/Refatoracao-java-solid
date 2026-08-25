@@ -7,6 +7,9 @@ public class Abrigo {
     private String telefone;
     private Pet[] pets;
 
+    public Abrigo(){
+
+    }
     public Abrigo(String nome, String endereco, String telefone) {
         this.nome = nome;
         this.endereco = endereco;
