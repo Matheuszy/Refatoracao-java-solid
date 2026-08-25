@@ -30,9 +30,9 @@ public class AdopetConsoleApplication {
                 } else if (opcaoEscolhida == 2) {
                     commandExecutor.execute(new CadastrarAbrigoCommand());
                 } else if (opcaoEscolhida == 3) {
-                    petService.listarPetsDoAbrigo();
+                    commandExecutor.execute(new ListarPetsDoAbrigoCommand());
                 } else if (opcaoEscolhida == 4) {
-                    petService.importarPetsDoAbrigo();
+                    commandExecutor.execute(new importarPetsDoAbrigoCommand());
                 } else if (opcaoEscolhida == 5) {
                     break;
                 } else {
