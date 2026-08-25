@@ -5,6 +5,7 @@ public class Abrigo {
     private String nome;
     private String endereco;
     private String telefone;
+    private Pet[] pets;
 
     public Abrigo(String nome, String endereco, String telefone) {
         this.nome = nome;
@@ -43,4 +44,9 @@ public class Abrigo {
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
+
+    public Pet[] getPets() {
+        return pets;
+    }
+
 }
