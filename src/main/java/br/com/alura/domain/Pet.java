@@ -8,26 +8,10 @@ public class Pet {
     private String cor;
     private Float peso;
 
+
     public Pet() {
 
     }
-
-    public String getCor() {
-        return cor;
-    }
-
-    public void setCor(String cor) {
-        this.cor = cor;
-    }
-
-    public Float getPeso() {
-        return peso;
-    }
-
-    public void setPeso(Float peso) {
-        this.peso = peso;
-    }
-
     public Pet(String tipo, String nome, String raca, Integer idade, String cor, Float peso) {
         this.tipo = tipo;
         this.nome = nome;
@@ -67,5 +51,21 @@ public class Pet {
 
     public void setIdade(Integer idade) {
         this.idade = idade;
+    }
+
+    public String getCor() {
+        return cor;
+    }
+
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+
+    public Float getPeso() {
+        return peso;
+    }
+
+    public void setPeso(Float peso) {
+        this.peso = peso;
     }
 }
