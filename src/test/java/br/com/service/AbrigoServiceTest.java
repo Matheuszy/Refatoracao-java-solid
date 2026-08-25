@@ -57,4 +57,27 @@ public class AbrigoServiceTest {
             Assertions.assertEquals(expectedId, lines[1]);
 
     }
+    @Test
+    public void naoDeveListarAbrigos() throws IOException, InterruptedException {
+
+        String expected = "Não existem abrigos cadastrados";
+
+
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        PrintStream ps = new PrintStream(baos);
+        System.setOut(ps);
+
+
+        when(response.body()).thenReturn("[]");
+        when(client.dispararRequisicaoGet(any())).thenReturn(response);
+
+
+        service.listarAbrigo();
+
+
+        String[] lines = baos.toString().split(System.lineSeparator());
+
+        Assertions.assertEquals(expected, lines[0]);
+
+    }
 }
