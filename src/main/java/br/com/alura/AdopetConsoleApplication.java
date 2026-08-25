@@ -8,6 +8,10 @@ import java.util.Scanner;
 public class AdopetConsoleApplication {
 
     public static void main(String[] args) {
+
+        CommandExecutor commandExecutor = new CommandExecutor();
+
+
         ClientHttpConfiguration client = new ClientHttpConfiguration();
         AbrigoService abrigoService = new AbrigoService(client);
         PetService petService = new PetService(client);
@@ -26,9 +30,9 @@ public class AdopetConsoleApplication {
                 opcaoEscolhida = Integer.parseInt(textoDigitado);
 
                 if (opcaoEscolhida == 1) {
-                    abrigoService.listarAbrigo();
+                    commandExecutor.execute(new ListarAbrigoCommand());
                 } else if (opcaoEscolhida == 2) {
-                    abrigoService.cadastrarAbrigo();
+                    commandExecutor.execute(new CadastrarAbrigoCommand());
                 } else if (opcaoEscolhida == 3) {
                     petService.listarPetsDoAbrigo();
                 } else if (opcaoEscolhida == 4) {
