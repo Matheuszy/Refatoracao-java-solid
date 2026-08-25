@@ -30,12 +30,17 @@ public class AbrigoService {
         Mapper mapper = new Mapper();
         Abrigo[] abrigos = mapper.mapear(responseBody, Abrigo[].class);
         List<Abrigo> listaAbrigos = Arrays.stream(abrigos).toList();
-        System.out.println("Abrigos cadastrados:");
-        for (Abrigo abrigo: listaAbrigos) {
-            long id = abrigo.getId();
-            String nome = abrigo.getNome();
-            System.out.println(id +" - " +nome);
+        if (listaAbrigos.isEmpty()) {
+            System.out.println("Não existem abrigos cadastrados");
+        } else {
+            System.out.println("Abrigos cadastrados:");
+            for (Abrigo abrigo: listaAbrigos) {
+                long id = abrigo.getId();
+                String nome = abrigo.getNome();
+                System.out.println(id +" - " +nome);
+            }
         }
+
     }
 
     public void cadastrarAbrigo() throws IOException, InterruptedException {
