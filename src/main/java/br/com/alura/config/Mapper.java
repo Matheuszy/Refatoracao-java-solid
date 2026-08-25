@@ -1,6 +1,5 @@
 package br.com.alura.config;
 
-import br.com.alura.domain.Abrigo;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.JsonProcessingException;
 
